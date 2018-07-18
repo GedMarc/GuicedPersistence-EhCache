@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.jwebmp</groupId>
         <artifactId>jwebmp-bom</artifactId>
-        <version>0.57.0.12-SNAPSHOT</version>
+        <version>0.0.0_0-SNAPSHOT</version>
     </parent>
 
     <artifactId>guiced-persistence-ehcache</artifactId>
