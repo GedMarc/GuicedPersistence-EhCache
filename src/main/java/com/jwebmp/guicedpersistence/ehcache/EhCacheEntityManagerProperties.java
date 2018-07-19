@@ -1,7 +1,7 @@
 package com.jwebmp.guicedpersistence.ehcache;
 
 import com.jwebmp.guicedpersistence.db.PropertiesEntityManagerReader;
-import com.jwebmp.logger.LogFactory;
+import com.oracle.jaxb21.PersistenceUnit;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,7 +14,7 @@ public class EhCacheEntityManagerProperties
 	private static String regionName = null;
 
 	@Override
-	public Map<String, String> processProperties(Properties incomingProperties)
+	public Map<String, String> processProperties(PersistenceUnit persistenceUnit, Properties incomingProperties)
 	{
 		Map<String, String> props = new HashMap<>();
 		props.put("hibernate.cache.use_second_level_cache", "true");
