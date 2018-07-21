@@ -1,3 +1,6 @@
+import com.jwebmp.guicedinjection.interfaces.IGuiceDefaultBinder;
+import com.jwebmp.guicedpersistence.ehcache.EhCacheBinderIGuice;
+
 module com.jwebmp.guicedpersistence.ehcache {
 	exports com.jwebmp.guicedpersistence.ehcache;
 
@@ -9,4 +12,5 @@ module com.jwebmp.guicedpersistence.ehcache {
 	requires cache.annotations.ri.guice;
 	requires com.jwebmp.guicedpersistence;
 
+	provides IGuiceDefaultBinder with EhCacheBinderIGuice;
 }

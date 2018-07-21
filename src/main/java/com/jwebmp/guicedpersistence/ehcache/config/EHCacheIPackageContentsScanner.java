@@ -1,12 +1,12 @@
 package com.jwebmp.guicedpersistence.ehcache.config;
 
-import com.jwebmp.guicedinjection.scanners.PackageContentsScanner;
+import com.jwebmp.guicedinjection.interfaces.IPackageContentsScanner;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class EHCachePackageContentsScanner
-		implements PackageContentsScanner
+public class EHCacheIPackageContentsScanner
+		implements IPackageContentsScanner
 {
 	@Override
 	public Set<String> searchFor()

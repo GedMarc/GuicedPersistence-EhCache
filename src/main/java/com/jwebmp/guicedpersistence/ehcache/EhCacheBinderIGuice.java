@@ -1,7 +1,7 @@
 package com.jwebmp.guicedpersistence.ehcache;
 
 import com.jwebmp.guicedinjection.abstractions.GuiceInjectorModule;
-import com.jwebmp.guicedinjection.interfaces.GuiceDefaultBinder;
+import com.jwebmp.guicedinjection.interfaces.IGuiceDefaultBinder;
 import com.jwebmp.logger.LogFactory;
 import org.jsr107.ri.annotations.guice.module.CacheAnnotationsModule;
 
@@ -12,10 +12,10 @@ import java.util.logging.Logger;
  * Binds Caching Annotations to the Hazelcast Provider
  */
 @SuppressWarnings("unused")
-public class EhCacheBinder
-		extends GuiceDefaultBinder
+public class EhCacheBinderIGuice
+		implements IGuiceDefaultBinder<GuiceInjectorModule>
 {
-	private static final Logger log = LogFactory.getLog("EhCacheBinder");
+	private static final Logger log = LogFactory.getLog("EhCacheBinderIGuice");
 	private static boolean registerCacheModule = true;
 
 	@Override
@@ -35,6 +35,6 @@ public class EhCacheBinder
 
 	public static void setRegisterCacheModule(boolean registerCacheModule)
 	{
-		EhCacheBinder.registerCacheModule = registerCacheModule;
+		EhCacheBinderIGuice.registerCacheModule = registerCacheModule;
 	}
 }
