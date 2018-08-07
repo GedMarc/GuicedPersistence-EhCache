@@ -69,6 +69,11 @@
         </dependency>
 
         <dependency>
+            <groupId>javax.cache</groupId>
+            <artifactId>cache-api</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>org.jsr107.ri</groupId>
             <artifactId>cache-annotations-ri-guice</artifactId>
         </dependency>
