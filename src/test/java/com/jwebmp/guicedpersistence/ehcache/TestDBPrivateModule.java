@@ -1,7 +1,7 @@
 package com.jwebmp.guicedpersistence.ehcache;
 
+import com.jwebmp.guicedpersistence.db.AbstractDatabaseProviderModule;
 import com.jwebmp.guicedpersistence.db.ConnectionBaseInfo;
-import com.jwebmp.guicedpersistence.db.connectionbasebuilders.AbstractDatabaseProviderModule;
 import com.jwebmp.guicedpersistence.jpa.JPAConnectionBaseInfo;
 import com.oracle.jaxb21.PersistenceUnit;
 
