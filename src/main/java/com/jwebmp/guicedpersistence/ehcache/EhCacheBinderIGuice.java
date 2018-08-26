@@ -13,28 +13,28 @@ import java.util.logging.Logger;
  */
 @SuppressWarnings("unused")
 public class EhCacheBinderIGuice
-		implements IGuiceDefaultBinder<GuiceInjectorModule>
+		implements IGuiceDefaultBinder<EhCacheBinderIGuice, GuiceInjectorModule>
 {
 	private static final Logger log = LogFactory.getLog("EhCacheBinderIGuice");
 	private static boolean registerCacheModule = true;
 
-	@Override
-	public void onBind(GuiceInjectorModule module)
-	{
-		if (registerCacheModule)
-		{
-			log.log(Level.CONFIG, "Registering Cache Annotations Module");
-			module.install(new CacheAnnotationsModule());
-		}
-	}
-
 	public static boolean isRegisterCacheModule()
 	{
-		return registerCacheModule;
+		return EhCacheBinderIGuice.registerCacheModule;
 	}
 
 	public static void setRegisterCacheModule(boolean registerCacheModule)
 	{
 		EhCacheBinderIGuice.registerCacheModule = registerCacheModule;
+	}
+
+	@Override
+	public void onBind(GuiceInjectorModule module)
+	{
+		if (EhCacheBinderIGuice.registerCacheModule)
+		{
+			EhCacheBinderIGuice.log.log(Level.CONFIG, "Registering Cache Annotations Module");
+			module.install(new CacheAnnotationsModule());
+		}
 	}
 }

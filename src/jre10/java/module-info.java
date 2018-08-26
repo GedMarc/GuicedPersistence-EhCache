@@ -1,10 +1,10 @@
 import com.jwebmp.guicedinjection.interfaces.IGuiceDefaultBinder;
 import com.jwebmp.guicedpersistence.ehcache.EhCacheBinderIGuice;
+import com.jwebmp.guicedpersistence.ehcache.EhCacheEntityManagerProperties;
+import com.jwebmp.guicedpersistence.services.PropertiesEntityManagerReader;
 
 module com.jwebmp.guicedpersistence.ehcache {
 	exports com.jwebmp.guicedpersistence.ehcache;
-
-	exports com.jwebmp.guicedpersistence.ehcache.config to io.github.lukehutch.fastclasspathscanner,com.jwebmp.guicedpersistence;
 
 	requires com.jwebmp.guicedinjection;
 	requires java.logging;
@@ -13,4 +13,6 @@ module com.jwebmp.guicedpersistence.ehcache {
 	requires com.jwebmp.guicedpersistence;
 
 	provides IGuiceDefaultBinder with EhCacheBinderIGuice;
+	provides PropertiesEntityManagerReader with EhCacheEntityManagerProperties;
+
 }
