@@ -12,28 +12,28 @@ import java.util.logging.Logger;
  * Binds Caching Annotations to the Hazelcast Provider
  */
 @SuppressWarnings("unused")
-public class EhCacheBinderIGuice
-		implements IGuiceDefaultBinder<EhCacheBinderIGuice, GuiceInjectorModule>
+public class EhCacheBinder
+		implements IGuiceDefaultBinder<EhCacheBinder, GuiceInjectorModule>
 {
-	private static final Logger log = LogFactory.getLog("EhCacheBinderIGuice");
+	private static final Logger log = LogFactory.getLog("EhCacheBinder");
 	private static boolean registerCacheModule = true;
 
 	public static boolean isRegisterCacheModule()
 	{
-		return EhCacheBinderIGuice.registerCacheModule;
+		return EhCacheBinder.registerCacheModule;
 	}
 
 	public static void setRegisterCacheModule(boolean registerCacheModule)
 	{
-		EhCacheBinderIGuice.registerCacheModule = registerCacheModule;
+		EhCacheBinder.registerCacheModule = registerCacheModule;
 	}
 
 	@Override
 	public void onBind(GuiceInjectorModule module)
 	{
-		if (EhCacheBinderIGuice.registerCacheModule)
+		if (EhCacheBinder.registerCacheModule)
 		{
-			EhCacheBinderIGuice.log.log(Level.CONFIG, "Registering Cache Annotations Module");
+			EhCacheBinder.log.log(Level.CONFIG, "Registering Cache Annotations Module");
 			module.install(new CacheAnnotationsModule());
 		}
 	}
