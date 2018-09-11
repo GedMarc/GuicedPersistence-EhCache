@@ -12,6 +12,8 @@ module com.jwebmp.guicedpersistence.ehcache {
 	requires cache.annotations.ri.guice;
 	requires com.jwebmp.guicedpersistence;
 
+	requires com.jwebmp.guicedpersistence.readers.hibernateproperties;
+
 	provides IGuiceDefaultBinder with EhCacheBinder;
 	provides PropertiesEntityManagerReader with EhCacheEntityManagerProperties;
 
