@@ -21,33 +21,6 @@
     <dependencies>
         <dependency>
             <groupId>com.jwebmp</groupId>
-            <artifactId>guiced-persistence</artifactId>
-            <version>${project.version}</version>
-            <classifier>${jwebmp.runtime.classifier}</classifier>
-            <!--<optional>true</optional>-->
-            <type>jar</type>
-        </dependency>
-
-        <dependency>
-            <groupId>com.jwebmp</groupId>
-            <artifactId>jwebmp-log-master</artifactId>
-            <version>${project.version}</version>
-            <classifier>${jwebmp.runtime.classifier}</classifier>
-            <!--<optional>true</optional>-->
-            <type>jar</type>
-        </dependency>
-
-        <dependency>
-            <groupId>com.jwebmp</groupId>
-            <artifactId>guiced-injection</artifactId>
-            <version>${project.version}</version>
-            <classifier>${jwebmp.runtime.classifier}</classifier>
-            <!--<optional>true</optional>-->
-            <type>jar</type>
-        </dependency>
-
-        <dependency>
-            <groupId>com.jwebmp</groupId>
             <artifactId>guiced-persistence-hibernateproperties-reader</artifactId>
             <version>${project.version}</version>
             <classifier>${jwebmp.runtime.classifier}</classifier>
@@ -136,7 +109,7 @@
     </dependencies>
 
     <scm>
-        <url>https://github.com/GedMarc/GuicedPersistence.git</url>
+        <url>https://github.com/GedMarc/GuicedPersistence-EhCache.git</url>
     </scm>
 
     <issueManagement>
