@@ -24,7 +24,7 @@
             <artifactId>guiced-persistence</artifactId>
             <version>${project.version}</version>
             <classifier>${jwebmp.runtime.classifier}</classifier>
-            <optional>true</optional>
+            <!--<optional>true</optional>-->
             <type>jar</type>
         </dependency>
 
@@ -33,7 +33,7 @@
             <artifactId>jwebmp-log-master</artifactId>
             <version>${project.version}</version>
             <classifier>${jwebmp.runtime.classifier}</classifier>
-            <optional>true</optional>
+            <!--<optional>true</optional>-->
             <type>jar</type>
         </dependency>
 
@@ -42,7 +42,7 @@
             <artifactId>guiced-injection</artifactId>
             <version>${project.version}</version>
             <classifier>${jwebmp.runtime.classifier}</classifier>
-            <optional>true</optional>
+            <!--<optional>true</optional>-->
             <type>jar</type>
         </dependency>
 
@@ -51,9 +51,17 @@
             <artifactId>guiced-persistence-hibernateproperties-reader</artifactId>
             <version>${project.version}</version>
             <classifier>${jwebmp.runtime.classifier}</classifier>
-            <optional>true</optional>
+            <!--<optional>true</optional>-->
             <type>jar</type>
         </dependency>
+
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <type>jar</type>
+        </dependency>
+
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -111,13 +119,6 @@
         </dependency>
 
         <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <type>jar</type>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
             <groupId>javax.persistence</groupId>
             <artifactId>javax.persistence-api</artifactId>
             <type>jar</type>
@@ -128,7 +129,7 @@
             <artifactId>guiced-persistence-jpa</artifactId>
             <version>${project.version}</version>
             <classifier>${jwebmp.runtime.classifier}</classifier>
-            <optional>true</optional>
+            <!--<optional>true</optional>-->
             <type>jar</type>
             <scope>test</scope>
         </dependency>
