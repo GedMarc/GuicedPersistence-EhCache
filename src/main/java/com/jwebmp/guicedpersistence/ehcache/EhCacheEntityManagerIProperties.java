@@ -1,6 +1,6 @@
 package com.jwebmp.guicedpersistence.ehcache;
 
-import com.jwebmp.guicedpersistence.services.PropertiesEntityManagerReader;
+import com.jwebmp.guicedpersistence.services.IPropertiesEntityManagerReader;
 import com.oracle.jaxb21.PersistenceUnit;
 
 import java.util.HashMap;
@@ -8,8 +8,8 @@ import java.util.Map;
 import java.util.Properties;
 
 @SuppressWarnings("unused")
-public class EhCacheEntityManagerProperties
-		implements PropertiesEntityManagerReader
+public class EhCacheEntityManagerIProperties
+		implements IPropertiesEntityManagerReader
 {
 	private static String regionName = null;
 
@@ -20,7 +20,7 @@ public class EhCacheEntityManagerProperties
 	 */
 	public static String getRegionName()
 	{
-		return EhCacheEntityManagerProperties.regionName;
+		return EhCacheEntityManagerIProperties.regionName;
 	}
 
 	/**
@@ -31,7 +31,7 @@ public class EhCacheEntityManagerProperties
 	 */
 	public static void setRegionName(String regionName)
 	{
-		EhCacheEntityManagerProperties.regionName = regionName;
+		EhCacheEntityManagerIProperties.regionName = regionName;
 	}
 
 	@Override
