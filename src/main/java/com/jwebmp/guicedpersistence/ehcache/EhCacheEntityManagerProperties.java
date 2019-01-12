@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Properties;
 
 @SuppressWarnings("unused")
-public class EhCacheEntityManagerIProperties
+public class EhCacheEntityManagerProperties
 		implements IPropertiesEntityManagerReader
 {
 	private static String regionName = null;
@@ -20,7 +20,7 @@ public class EhCacheEntityManagerIProperties
 	 */
 	public static String getRegionName()
 	{
-		return EhCacheEntityManagerIProperties.regionName;
+		return EhCacheEntityManagerProperties.regionName;
 	}
 
 	/**
@@ -31,7 +31,7 @@ public class EhCacheEntityManagerIProperties
 	 */
 	public static void setRegionName(String regionName)
 	{
-		EhCacheEntityManagerIProperties.regionName = regionName;
+		EhCacheEntityManagerProperties.regionName = regionName;
 	}
 
 	@Override
